@@ -1,0 +1,47 @@
+<div class="s4-notdlg" id="breadcrumb">
+	<style type="text/css">
+		UL.s4-breadcrumb
+		{
+			display: inline-block !important;
+		}
+		#breadcrumb .last-item .ms-ltviewselectormenuheader {
+			display: inline;
+		}
+		#breadcrumb li, #breadcrumb ul
+		{
+			display: inline;
+		}
+		#breadcrumb .last-item > span, #breadcrumb .last-item > a {
+			display: none;
+		}
+		#breadcrumb .last-item {
+			font-size: 0;
+		}
+	</style>
+	<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server">
+		<SharePoint:ListSiteMapPath
+			runat="server"
+			SiteMapProviders="SPSiteMapProvider,SPContentMapProvider"
+			RenderCurrentNodeAsLink="false"
+			PathSeparator=""
+			CssClass="s4-breadcrumb"
+			NodeStyle-CssClass="s4-breadcrumbNode"
+			CurrentNodeStyle-CssClass="s4-breadcrumbCurrentNode"
+			RootNodeStyle-CssClass="s4-breadcrumbRootNode"
+			NodeImageOffsetX=0
+			NodeImageOffsetY=353
+			NodeImageWidth=16
+			NodeImageHeight=16
+			NodeImageUrl="/_layouts/images/fgimg.png"
+			RTLNodeImageOffsetX=0
+			RTLNodeImageOffsetY=376
+			RTLNodeImageWidth=16
+			RTLNodeImageHeight=16
+			RTLNodeImageUrl="/_layouts/images/fgimg.png"
+			HideInteriorRootNodes="true"
+			SkipLinkText="" />
+	</asp:ContentPlaceHolder>
+	<span class="last-item">			  	
+		<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+	</span>
+</div>
